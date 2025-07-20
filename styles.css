@@ -605,3 +605,8 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+strong {
+    font-weight: 900;
+    font-size: 30px;
+}
