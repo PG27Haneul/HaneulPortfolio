@@ -30,7 +30,7 @@ document.querySelectorAll('.nav-link, .mobile-link').forEach(link => {
 // Active section highlighting
 function updateActiveSection() {
     const sections = ['home', 'about', 'skills', 'projects', 'contact'];
-    const scrollPosition = window.scrollY + 100;
+    const scrollPosition = window.scrollY + 300;
 
     for (const section of sections) {
         const element = document.getElementById(section);
