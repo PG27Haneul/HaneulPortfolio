@@ -293,11 +293,11 @@ section {
     text-align: center;
 }
 
-    .skill-card:hover {
+/*    .skill-card:hover {
         border-color: #10b981;
         transform: translateY(-5px);
         background: rgba(51, 65, 85, 0.8);
-    }
+    }*/
 
 .skill-icon {
     background: rgba(16, 185, 129, 0.2);
@@ -423,7 +423,7 @@ section {
 
 /* Contact Section */
 .contact {
-    background-color: rgba(30, 41, 59, 0.5);
+    background: #1e293b;
 }
 
 .contact-content {

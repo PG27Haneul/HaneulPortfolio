@@ -59,6 +59,8 @@ window.addEventListener('scroll', updateActiveSection);
 // Contact form handling
 const contactForm = document.getElementById('contactForm');
 
+emailjs.init("zCGHcU1pkCns5AK1J");
+
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -74,16 +76,18 @@ contactForm.addEventListener('submit', (e) => {
         return;
     }
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-
-    // Simulate form submission
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    contactForm.reset();
+    // Send the email using EmailJS
+    emailjs.send("service_q2f6w0o", "template_18lmgv9", {
+        message: message,
+        from_name: name,
+        reply_to: email,
+    })
+    .then(() => {
+        alert('Thank you for your message! I\'ll get back to you soon.');
+        contactForm.reset();
+    }, (error) => {
+        alert('Something went wrong: ' + error.text);
+    });
 });
 
 // Intersection Observer for animations
