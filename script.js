@@ -53,6 +53,40 @@ function updateActiveSection() {
     }
 }
 
+// Modal functionality
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+        closeModal(e.target.id);
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const openModals = document.querySelectorAll('.modal[style*="block"]');
+        openModals.forEach(modal => {
+            closeModal(modal.id);
+        });
+    }
+});
+
 // Scroll event listener for active section highlighting
 window.addEventListener('scroll', updateActiveSection);
 
@@ -82,12 +116,12 @@ contactForm.addEventListener('submit', (e) => {
         from_name: name,
         reply_to: email,
     })
-    .then(() => {
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        contactForm.reset();
-    }, (error) => {
-        alert('Something went wrong: ' + error.text);
-    });
+        .then(() => {
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            contactForm.reset();
+        }, (error) => {
+            alert('Something went wrong: ' + error.text);
+        });
 });
 
 // Intersection Observer for animations

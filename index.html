@@ -73,7 +73,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-image">
-                <img src="images/PortfolioPicture.jpg" alt="Profile" />
+                    <img src="images/PortfolioPicture.jpg" alt="Profile" />
                 </div>
                 <div class="about-text">
                     <h3><strong>Hello! I'm Haneul</strong>, a passionate game developer living in British Columbia, Canada.</h3>
@@ -84,7 +84,7 @@
                         That passion inspired me to start programming, driven by the goal of creating my own game worlds.
                     </p>
                     <p>
-                        When I’m not programming, you’ll usually find me playing video games and working on mastering a particular mechanic.
+                        When I'm not programming, you'll usually find me playing video games and working on mastering a particular mechanic.
                         I also enjoy watching YouTube videos about game design and player strategies.
                     </p>
                     <div class="social-links">
@@ -117,10 +117,12 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" onclick="openModal('neonNexusModal')">
                     <div class="project-image">
                         <img src="images/Neon-Nexus.png" alt="Neon-Nexus" />
-                        <div class="project-overlay"></div>
+                        <div class="project-overlay">
+                            <div class="overlay-text">Click for Details</div>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Neon-Nexus</h3>
@@ -130,26 +132,24 @@
                             <span class="tech-tag">C#</span>
                         </div>
                         <div class="project-links">
-                            <!--<a href="https://github.com/vfs-sct/GD76PG27TP-NeonNexus" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                            </a>-->
-                            <a href="#" class="project-link">
+                            <button class="project-link" onclick="event.stopPropagation(); openModal('neonNexusModal')">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                     <polyline points="15,3 21,3 21,9"></polyline>
                                     <line x1="10" y1="14" x2="21" y2="3"></line>
                                 </svg>
-                            </a>
+                                View Details
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" onclick="openModal('sweetSpotModal')">
                     <div class="project-image">
                         <img src="images/Sweet-Spot.png" alt="Sweet Spot Logo" />
-                        <div class="project-overlay"></div>
+                        <div class="project-overlay">
+                            <div class="overlay-text">Click for Details</div>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Sweet Spot</h3>
@@ -159,24 +159,137 @@
                             <span class="tech-tag">C++</span>
                         </div>
                         <div class="project-links">
-                            <!--<a href="#" class="project-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>-->
-                            </a>
-                            <a href="#" class="project-link">
+                            <button class="project-link" onclick="event.stopPropagation(); openModal('sweetSpotModal')">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                     <polyline points="15,3 21,3 21,9"></polyline>
                                     <line x1="10" y1="14" x2="21" y2="3"></line>
                                 </svg>
-                            </a>
+                                View Details
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Project Modals -->
+    <!-- Neon Nexus Modal -->
+    <div id="neonNexusModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Neon-Nexus</h2>
+                <span class="close" onclick="closeModal('neonNexusModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/Neon-Nexus.png" alt="Neon-Nexus Gameplay" />
+                </div>
+                <div class="modal-details">
+                    <div class="project-tech-modal">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">2D Game Development</span>
+                        <span class="tech-tag">AI Programming</span>
+                    </div>
+
+                    <h3>Project Overview</h3>
+                    <p>Neon-Nexus is an immersive 2D stealth game that challenges players to navigate through neon-lit environments while avoiding intelligent AI enemies. Built using Unity and C#, this project showcases advanced AI behavior systems and dynamic gameplay mechanics.</p>
+
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Advanced AI System:</strong> Enemies feature sophisticated search patterns and detection algorithms that adapt to player behavior</li>
+                        <li><strong>Dynamic Stealth Mechanics:</strong> Line-of-sight detection, sound-based alerting, and patrol route optimization</li>
+                        <li><strong>Interactive Environment:</strong> Players can manipulate lighting and objects to create distractions and hiding spots</li>
+                        <li><strong>Progressive Difficulty:</strong> AI becomes more challenging as players advance through levels</li>
+                        <li><strong>Visual Polish:</strong> Atmospheric neon lighting effects and smooth 2D animations</li>
+                    </ul>
+
+                    <h3>Technical Highlights</h3>
+                    <ul>
+                        <li>Implemented state machine-based AI with multiple behavior states (Patrol, Alert, Search, Chase)</li>
+                        <li>Developed custom pathfinding algorithms for efficient enemy movement</li>
+                        <li>Created modular stealth detection system with adjustable parameters</li>
+                        <li>Optimized performance for smooth 60fps gameplay on target platforms</li>
+                        <li>Integrated custom shader effects for atmospheric lighting</li>
+                    </ul>
+
+                    <h3>My Role</h3>
+                    <p>As the lead programmer on this project, I was responsible for:</p>
+                    <ul>
+                        <li>Designing and implementing the core AI behavior systems</li>
+                        <li>Creating the stealth detection and alerting mechanisms</li>
+                        <li>Optimizing game performance and memory usage</li>
+                        <li>Integrating visual effects and audio systems</li>
+                        <li>Playtesting and balancing gameplay difficulty</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sweet Spot Modal -->
+    <div id="sweetSpotModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Sweet Spot</h2>
+                <span class="close" onclick="closeModal('sweetSpotModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/Sweet-Spot.png" alt="Sweet Spot Gameplay" />
+                </div>
+                <div class="modal-details">
+                    <div class="project-tech-modal">
+                        <span class="tech-tag">Unreal Engine</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">3D Game Development</span>
+                        <span class="tech-tag">Horror Game Design</span>
+                    </div>
+
+                    <h3>Project Overview</h3>
+                    <p>Sweet Spot is a chilling 3D puzzle-horror game developed in Unreal Engine. Players must use their wits and a unique Focus ability to solve intricate puzzles while navigating through disturbing, maze-like environments filled with psychological horror elements.</p>
+
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Focus Ability System:</strong> Unique mechanic allowing players to reveal hidden clues and environmental hints</li>
+                        <li><strong>Atmospheric Horror:</strong> Psychological tension built through environmental storytelling and sound design</li>
+                        <li><strong>Complex Puzzle Design:</strong> Multi-layered puzzles requiring observation, logic, and timing</li>
+                        <li><strong>Dynamic Maze Generation:</strong> Procedurally influenced level layouts that keep players disoriented</li>
+                        <li><strong>Immersive Audio:</strong> 3D spatial audio system that enhances horror atmosphere</li>
+                    </ul>
+
+                    <h3>Technical Highlights</h3>
+                    <ul>
+                        <li>Implemented custom Focus ability system using Unreal's Blueprint and C++ integration</li>
+                        <li>Developed sophisticated lighting system for dramatic atmospheric effects</li>
+                        <li>Created modular puzzle framework allowing for easy level design iteration</li>
+                        <li>Built custom shader materials for horror-themed visual effects</li>
+                        <li>Optimized rendering pipeline for complex indoor environments</li>
+                    </ul>
+
+                    <h3>Gameplay Mechanics</h3>
+                    <ul>
+                        <li><strong>Focus Mode:</strong> Players can enter a heightened state revealing interactive objects and hidden pathways</li>
+                        <li><strong>Environmental Puzzles:</strong> Solutions require manipulating lighting, moving objects, and discovering hidden switches</li>
+                        <li><strong>Tension Management:</strong> Carefully paced horror elements that build suspense without relying on jump scares</li>
+                        <li><strong>Progressive Discovery:</strong> Story unfolds through environmental clues and puzzle solutions</li>
+                    </ul>
+
+                    <h3>My Role</h3>
+                    <p>As the primary developer, I handled:</p>
+                    <ul>
+                        <li>Core gameplay programming and Focus ability implementation</li>
+                        <li>Puzzle system architecture and individual puzzle mechanics</li>
+                        <li>Lighting and atmosphere programming for horror elements</li>
+                        <li>Performance optimization for complex 3D environments</li>
+                        <li>Integration of audio systems and environmental storytelling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
