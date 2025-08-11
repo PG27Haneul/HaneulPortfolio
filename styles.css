@@ -270,18 +270,28 @@ section {
     }
 }
 
-.about-image img {
-    width: 100%;
-    max-width: 24rem;
-    border-radius: 1rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    margin: 0 auto;
-    display: block;
-    position: relative;
-    z-index: 2;
-    border: 3px solid transparent;
-    background: linear-gradient(white, white) padding-box, linear-gradient(45deg, #10b981, #059669, #047857, #065f46) border-box;
+.about-image {
+    display: flex;
+    justify-content: center;
 }
+
+.image-frame {
+    position: relative;
+    border: 2px solid #00ff88;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+    max-width: 300px;
+}
+
+    .image-frame img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: brightness(0.9) contrast(1.1);
+    }
+
+
 
 .about-text h3 {
     font-size: 1.5rem;
@@ -657,6 +667,19 @@ section {
 }
 
     .contact-item svg {
+        color: #10b981;
+    }
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+    .social-link:hover {
         color: #10b981;
     }
 

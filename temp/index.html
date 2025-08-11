@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haneul Chun - Portfolio</title>
+    <meta name="description" content="Game programmer portfolio highlighting a 2D stealth game with AI in Unity, and a puzzle/horror game developed in Unreal Engine.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init({ publicKey: "zCGHcU1pkCns5AK1J" });
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">HANEUL.DEV</span>
+                <span class="logo-bracket">]</span>
+                <div class="logo-cursor">_</div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">&gt; HOME</a>
+                <a href="#about" class="nav-link" data-section="about">&gt; ABOUT</a>
+                <a href="#projects" class="nav-link" data-section="projects">&gt; PROJECTS</a>
+                <a href="#skills" class="nav-link" data-section="skills">&gt; SKILLS</a>
+                <a href="#contact" class="nav-link" data-section="contact">&gt; CONTACT</a>
+                <!--space-->
+                <a href="assets/HaneulResume.pdf" class="resume-btn" target="_blank" download>
+                    <span class="btn-text">DOWNLOAD_RESUME.PDF</span>
+                    <div class="btn-glitch"></div>
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu">
+            <a href="#home" class="mobile-link" data-section="home">Home</a>
+            <a href="#about" class="mobile-link" data-section="about">About</a>
+            <a href="#projects" class="mobile-link" data-section="projects">Projects</a>
+            <a href="#skills" class="mobile-link" data-section="skills">Skills</a>
+            <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+            <a href="assets/HaneulResume.pdf" class="my-mobile-link" target="_blank" download>Download Resume</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+            <div class="floating-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <div class="terminal-title">haneul@gamedev:~$</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command">whoami</span>
+                    </div>
+                    <h1 class="hero-title">HANEUL CHUN</h1>
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command">cat role.txt</span>
+                    </div>
+                    <h2 class="hero-subtitle">GAME_DEVELOPER.EXE</h2>
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command">cat mission.txt</span>
+                    </div>
+                    <p class="hero-description">
+                        > Crafting immersive digital worlds through code<br>
+                        > Transforming creative visions into interactive reality<br>
+                        > Specializing in AI systems & gameplay mechanics
+                    </p>
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command typing-animation">./initialize_portfolio.sh</span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn btn-primary glitch-btn" onclick="scrollToSection('projects')">
+                    <span class="btn-content">EXPLORE_PROJECTS</span>
+                </button>
+                <button class="btn btn-secondary matrix-btn" onclick="scrollToSection('contact')">
+                    <span class="btn-content">ESTABLISH_CONNECTION</span>
+                </button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-value" data-target="2">0</div>
+                <div class="stat-label">PROJECTS_COMPLETED</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" data-target="4">0</div>
+                <div class="stat-label">TECH_STACK</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" data-target="100">0</div>
+                <div class="stat-label">PASSION_LEVEL</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glitch Transition -->
+    <div class="section-divider">
+        <div class="glitch-line"></div>
+        <div class="divider-text">LOADING_PROFILE_DATA...</div>
+        <div class="glitch-line"></div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">&lt;</span>
+                ABOUT_ME
+                <span class="title-bracket">/&gt;</span>
+            </h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="scan-line"></div>
+                        <img src="images/PortfolioPicture.jpg" alt="Profile" />
+                        <div class="image-overlay">
+                            <div class="overlay-text">DEVELOPER_IDENTIFIED</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="file-name">profile.json</span>
+                            <div class="code-buttons">
+                                <span class="code-btn"></span>
+                                <span class="code-btn"></span>
+                                <span class="code-btn"></span>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="line-number">01</span>
+                                <span class="code-text">{</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">02</span>
+                                <span class="code-text">  <span class="key">"name"</span>: <span class="string">"Haneul Chun"</span>,</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">03</span>
+                                <span class="code-text">  <span class="key">"location"</span>: <span class="string">"British Columbia, CA"</span>,</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">04</span>
+                                <span class="code-text">  <span class="key">"passion"</span>: <span class="string">"Game Development"</span>,</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">05</span>
+                                <span class="code-text">  <span class="key">"mission"</span>: <span class="string">"Creating immersive worlds"</span>,</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">06</span>
+                                <span class="code-text">  <span class="key">"hobbies"</span>: [<span class="string">"gaming"</span>, <span class="string">"game_design"</span>]</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">07</span>
+                                <span class="code-text">}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/PG27Haneul" class="social-link github-link" target="_blank" rel="noopener noreferrer">
+                            <div class="link-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </div>
+                            <span class="link-text">GITHUB_REPO</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/haneul-chun-095751373/" class="social-link linkedin-link" target="_blank" rel="noopener noreferrer">
+                            <div class="link-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </div>
+                            <span class="link-text">LINKEDIN_PROFILE</span>
+                        </a>
+                        <a href="#contact" class="social-link email-link">
+                            <div class="link-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <span class="link-text">SEND_MESSAGE</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">&lt;</span>
+                FEATURED_PROJECTS
+                <span class="title-bracket">/&gt;</span>
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card neon-card" onclick="openModal('neonNexusModal')">
+                    <div class="project-header">
+                        <div class="project-status">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">ACTIVE</span>
+                        </div>
+                        <div class="project-id">#001</div>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/Neon-Nexus.png" alt="Neon-Nexus" />
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"></path>
+                                    </svg>
+                                </div>
+                                <div class="overlay-text">ANALYZE_PROJECT</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NEON_NEXUS.UNITY</h3>
+                        <p class="project-description">Advanced 2D stealth system with intelligent AI behavior patterns and dynamic enemy search algorithms.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag unity">UNITY_ENGINE</span>
+                            <span class="tech-tag csharp">C#_SCRIPTS</span>
+                            <span class="tech-tag ai">AI_SYSTEMS</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">95%</span>
+                                <span class="metric-label">STEALTH_EFFICIENCY</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">12</span>
+                                <span class="metric-label">AI_STATES</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card cyber-card" onclick="openModal('sweetSpotModal')">
+                    <div class="project-header">
+                        <div class="project-status">
+                            <span class="status-dot completed"></span>
+                            <span class="status-text">DEPLOYED</span>
+                        </div>
+                        <div class="project-id">#002</div>
+                    </div>
+                    <div class="project-image">
+                        <img src="images/Sweet-Spot.png" alt="Sweet Spot Logo" />
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="overlay-text">INVESTIGATE_PROJECT</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SWEET_SPOT.UE5</h3>
+                        <p class="project-description">Immersive 3D horror-puzzle experience featuring advanced Focus mechanics and atmospheric tension systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag unreal">UNREAL_ENGINE</span>
+                            <span class="tech-tag cpp">C++_CORE</span>
+                            <span class="tech-tag horror">HORROR_DESIGN</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">88%</span>
+                                <span class="metric-label">FEAR_FACTOR</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">24</span>
+                                <span class="metric-label">PUZZLE_LAYERS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- Neon Nexus Modal -->
+    <div id="neonNexusModal" class="modal">
+        <div class="modal-content cyber-modal">
+            <div class="modal-header">
+                <div class="modal-title-section">
+                    <h2 class="modal-title">NEON_NEXUS.UNITY</h2>
+                    <div class="modal-subtitle">STEALTH_SYSTEM_ANALYSIS</div>
+                </div>
+                <span class="close cyber-close" onclick="closeModal('neonNexusModal')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <div class="image-container">
+                        <img src="images/Neon-Nexus.png" alt="Neon-Nexus Gameplay" />
+                        <div class="image-scan-effect"></div>
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <div class="project-tech-modal">
+                        <span class="tech-tag unity">UNITY_ENGINE</span>
+                        <span class="tech-tag csharp">C#_SCRIPTS</span>
+                        <span class="tech-tag ai">AI_SYSTEMS</span>
+                        <span class="tech-tag stealth">STEALTH_MECHANICS</span>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            <span class="section-icon">&gt;</span>
+                            PROJECT_OVERVIEW
+                        </h3>
+                        <p>Advanced 2D stealth experience featuring sophisticated AI behavior systems and dynamic gameplay mechanics. Built with Unity and C#, showcasing cutting-edge enemy intelligence and player detection algorithms.</p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            <span class="section-icon">&gt;</span>
+                            CORE_FEATURES
+                        </h3>
+                        <ul class="feature-list">
+                            <li><span class="feature-bullet">▶</span><strong>Advanced AI System:</strong> Multi-state enemy behavior with adaptive search patterns</li>
+                            <li><span class="feature-bullet">▶</span><strong>Dynamic Stealth Mechanics:</strong> Line-of-sight detection and sound-based alerting</li>
+                            <li><span class="feature-bullet">▶</span><strong>Interactive Environment:</strong> Manipulatable lighting and distraction systems</li>
+                            <li><span class="feature-bullet">▶</span><strong>Progressive Difficulty:</strong> Adaptive AI that learns from player behavior</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            <span class="section-icon">&gt;</span>
+                            TECHNICAL_IMPLEMENTATION
+                        </h3>
+                        <ul class="feature-list">
+                            <li><span class="feature-bullet">▶</span>State machine-based AI with Patrol, Alert, Search, and Chase modes</li>
+                            <li><span class="feature-bullet">▶</span>Custom pathfinding algorithms for optimized enemy movement</li>
+                            <li><span class="feature-bullet">▶</span>Modular stealth detection system with configurable parameters</li>
+                            <li><span class="feature-bullet">▶</span>Performance optimization maintaining 60fps on target platforms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sweet Spot Modal -->
+    <div id="sweetSpotModal" class="modal">
+        <div class="modal-content horror-modal">
+            <div class="modal-header">
+                <div class="modal-title-section">
+                    <h2 class="modal-title">SWEET_SPOT.UE5</h2>
+                    <div class="modal-subtitle">HORROR_PUZZLE_ANALYSIS</div>
+                </div>
+                <span class="close horror-close" onclick="closeModal('sweetSpotModal')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <div class="image-container">
+                        <img src="images/Sweet-Spot.png" alt="Sweet Spot Gameplay" />
+                        <div class="image-glitch-effect"></div>
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <div class="project-tech-modal">
+                        <span class="tech-tag unreal">UNREAL_ENGINE</span>
+                        <span class="tech-tag cpp">C++_CORE</span>
+                        <span class="tech-tag horror">HORROR_DESIGN</span>
+                        <span class="tech-tag puzzle">PUZZLE_SYSTEMS</span>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            <span class="section-icon">&gt;</span>
+                            PROJECT_OVERVIEW
+                        </h3>
+                        <p>Immersive 3D horror-puzzle experience built in Unreal Engine. Features unique Focus ability mechanics and psychological tension systems designed to create an unsettling yet engaging player experience.</p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            <span class="section-icon">&gt;</span>
+                            CORE_FEATURES
+                        </h3>
+                        <ul class="feature-list">
+                            <li><span class="feature-bullet">▶</span><strong>Focus Ability System:</strong> Unique mechanic revealing hidden environmental clues</li>
+                            <li><span class="feature-bullet">▶</span><strong>Atmospheric Horror:</strong> Psychological tension through environmental storytelling</li>
+                            <li><span class="feature-bullet">▶</span><strong>Complex Puzzle Design:</strong> Multi-layered challenges requiring observation and logic</li>
+                            <li><span class="feature-bullet">▶</span><strong>Immersive Audio:</strong> 3D spatial audio enhancing horror atmosphere</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">
+                            <span class="section-icon">&gt;</span>
+                            TECHNICAL_IMPLEMENTATION
+                        </h3>
+                        <ul class="feature-list">
+                            <li><span class="feature-bullet">▶</span>Custom Focus ability system using Blueprint and C++ integration</li>
+                            <li><span class="feature-bullet">▶</span>Advanced lighting system for dramatic atmospheric effects</li>
+                            <li><span class="feature-bullet">▶</span>Modular puzzle framework enabling rapid level design iteration</li>
+                            <li><span class="feature-bullet">▶</span>Optimized rendering pipeline for complex indoor environments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">&lt;</span>
+                TECH_STACK
+                <span class="title-bracket">/&gt;</span>
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-card cpp-skill">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16,18 22,12 16,6"></polyline>
+                                <polyline points="8,6 2,12 8,18"></polyline>
+                            </svg>
+                        </div>
+                        <div class="skill-level">
+                            <div class="level-bar">
+                                <div class="level-fill" data-level="85"></div>
+                            </div>
+                            <span class="level-text">85%</span>
+                        </div>
+                    </div>
+                    <h3 class="skill-title">C++_CORE</h3>
+                    <p class="skill-description">Performance-critical systems in Unreal Engine with advanced memory management and optimization techniques.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">UNREAL_ENGINE</span>
+                        <span class="skill-tag">PERFORMANCE</span>
+                    </div>
+                </div>
+
+                <div class="skill-card csharp-skill">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="9" cy="9" r="2"></circle>
+                                <path d="M21 15.5c-1.5-1.5-4-1.5-5.5 0s-1.5 4 0 5.5 4 1.5 5.5 0 1.5-4 0-5.5z"></path>
+                            </svg>
+                        </div>
+                        <div class="skill-level">
+                            <div class="level-bar">
+                                <div class="level-fill" data-level="92"></div>
+                            </div>
+                            <span class="level-text">92%</span>
+                        </div>
+                    </div>
+                    <h3 class="skill-title">C#_UNITY</h3>
+                    <p class="skill-description">Advanced gameplay scripting and system architecture in Unity with clean, maintainable code practices.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">UNITY_ENGINE</span>
+                        <span class="skill-tag">GAMEPLAY</span>
+                    </div>
+                </div>
+
+                <div class="skill-card unreal-skill">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="skill-level">
+                            <div class="level-bar">
+                                <div class="level-fill" data-level="78"></div>
+                            </div>
+                            <span class="level-text">78%</span>
+                        </div>
+                    </div>
+                    <h3 class="skill-title">UNREAL_ENGINE</h3>
+                    <p class="skill-description">3D game development with Blueprint visual scripting and C++ integration for complex gameplay systems.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">BLUEPRINTS</span>
+                        <span class="skill-tag">3D_GRAPHICS</span>
+                    </div>
+                </div>
+
+                <div class="skill-card unity-skill">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"></polygon>
+                                <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                                <polyline points="22,8.5 12,15.5 2,8.5"></polyline>
+                            </svg>
+                        </div>
+                        <div class="skill-level">
+                            <div class="level-bar">
+                                <div class="level-fill" data-level="90"></div>
+                            </div>
+                            <span class="level-text">90%</span>
+                        </div>
+                    </div>
+                    <h3 class="skill-title">UNITY_ENGINE</h3>
+                    <p class="skill-description">Comprehensive 2D/3D game development with advanced AI systems and performance optimization expertise.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AI_SYSTEMS</span>
+                        <span class="skill-tag">2D_GAMES</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">&lt;</span>
+                ESTABLISH_CONNECTION
+                <span class="title-bracket">/&gt;</span>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <div class="terminal-title">connection_manager.exe</div>
+                        </div>
+                        <div class="terminal-content">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">./initiate_contact.sh</span>
+                            </div>
+                            <h3 class="contact-title">READY_FOR_COLLABORATION</h3>
+                            <p class="contact-description">
+                                > Seeking new opportunities in game development<br>
+                                > Available for freelance projects and full-time positions<br>
+                                > Response time: &lt; 24 hours
+                            </p>
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                        </svg>
+                                    </div>
+                                    <span class="contact-text">chunhaneul06@gmail.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="contact-text">github.com/PG27Haneul</span>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                            <rect x="2" y="9" width="4" height="12"></rect>
+                                            <circle cx="4" cy="4" r="2"></circle>
+                                        </svg>
+                                    </div>
+                                    <span class="contact-text">linkedin.com/in/haneul-chun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form cyber-form" id="contactForm">
+                    <div class="form-header">
+                        <h4 class="form-title">MESSAGE_TRANSMISSION</h4>
+                        <div class="form-status">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">READY</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">SENDER_NAME:</label>
+                        <input type="text" id="name" name="name" class="cyber-input" placeholder="Enter your name..." required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">EMAIL_ADDRESS:</label>
+                        <input type="email" id="email" name="email" class="cyber-input" placeholder="your.email@domain.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">MESSAGE_CONTENT:</label>
+                        <textarea id="message" name="message" rows="5" class="cyber-textarea" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary cyber-submit">
+                        <span class="btn-content">TRANSMIT_MESSAGE</span>
+                        <div class="btn-loading">
+                            <div class="loading-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-bracket">[</span>
+                        <span class="logo-text">HANEUL.DEV</span>
+                        <span class="logo-bracket">]</span>
+                    </div>
+                    <p class="footer-text">© 2025 HANEUL_CHUN.PORTFOLIO_V2.0</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-stats">
+                        <span class="stat">UPTIME: 99.9%</span>
+                        <span class="stat">STATUS: ONLINE</span>
+                        <span class="stat">VERSION: 2.0.1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

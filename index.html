@@ -73,7 +73,9 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="images/PortfolioPicture.jpg" alt="Profile" />
+                    <div class="image-frame">
+                        <img src="images/PortfolioPicture.jpg" alt="Profile" />
+                    </div>
                 </div>
                 <div class="about-text">
                     <h3><strong>Hello! I'm Haneul</strong>, a passionate game developer living in British Columbia, Canada.</h3>
@@ -195,34 +197,30 @@
                     </div>
 
                     <h3>Project Overview</h3>
-                    <p>Neon-Nexus is an immersive 2D stealth game that challenges players to navigate through neon-lit environments while avoiding intelligent AI enemies. Built using Unity and C#, this project showcases advanced AI behavior systems and dynamic gameplay mechanics.</p>
+                    <p>Neon Nexus  is a  Top Down, 2.5D, Stealth game. Where you play as the repair bot Roko, who has broken free from the AI Hive Mind. While Navigating the Maze Like floors of the Basilisk Tower you will use Roko’s Omni-Tool to temporarily  Disable Patrol Bots  and to Solve Puzzles while progressing to the super computer at the top of the tower in order to Destroy the AI Hive Mind and free the other robots.</p>
 
                     <h3>Key Features</h3>
                     <ul>
-                        <li><strong>Advanced AI System:</strong> Enemies feature sophisticated search patterns and detection algorithms that adapt to player behavior</li>
-                        <li><strong>Dynamic Stealth Mechanics:</strong> Line-of-sight detection, sound-based alerting, and patrol route optimization</li>
-                        <li><strong>Interactive Environment:</strong> Players can manipulate lighting and objects to create distractions and hiding spots</li>
-                        <li><strong>Progressive Difficulty:</strong> AI becomes more challenging as players advance through levels</li>
-                        <li><strong>Visual Polish:</strong> Atmospheric neon lighting effects and smooth 2D animations</li>
+                        <li><strong>AI System:</strong> Enemies follow set patrol routes, avoid obstacles, and use vision cones to detect the player in real-time</li>
+                        <li><strong>Enemy Variety:</strong> Includes ground patrols, flying enemies that can see over walls, and fixed-position cameras watching key areas </li>
+                        <li><strong>Combat:</strong> The player can shoot ground enemies to stun them and create an opening to escape or sneak past </li>
                     </ul>
 
                     <h3>Technical Highlights</h3>
                     <ul>
-                        <li>Implemented state machine-based AI with multiple behavior states (Patrol, Alert, Search, Chase)</li>
-                        <li>Developed custom pathfinding algorithms for efficient enemy movement</li>
-                        <li>Created modular stealth detection system with adjustable parameters</li>
-                        <li>Optimized performance for smooth 60fps gameplay on target platforms</li>
-                        <li>Integrated custom shader effects for atmospheric lighting</li>
+                        <li>Enemies patrol predefined paths and switch to chase mode when the player is detected</li>
+                        <li>Player detection is handled through raycast-based vision cones that check line-of-sight in real time</li>
+                        <li>Ground enemies can be stunned by player projectiles, temporarily disabling their behavior</li>
+                        <li>player detection meter that fills when in enemy vision</li>
                     </ul>
 
                     <h3>My Role</h3>
-                    <p>As the lead programmer on this project, I was responsible for:</p>
+                    <h4>As a programmer on this project, I was responsible for:</h4>
                     <ul>
-                        <li>Designing and implementing the core AI behavior systems</li>
-                        <li>Creating the stealth detection and alerting mechanisms</li>
-                        <li>Optimizing game performance and memory usage</li>
-                        <li>Integrating visual effects and audio systems</li>
-                        <li>Playtesting and balancing gameplay difficulty</li>
+                        <li>Implementing the core AI behavior systems</li>
+                        <li>Optimizing performance and memory usage for smooth gameplay</li>
+                        <li>Developing raycast-based vision cones with in-game visual representation</li>
+                        <li>Integrating audio and VFX feedback for enemy states and player actions</li>
                     </ul>
                 </div>
             </div>
@@ -249,42 +247,30 @@
                     </div>
 
                     <h3>Project Overview</h3>
-                    <p>Sweet Spot is a chilling 3D puzzle-horror game developed in Unreal Engine. Players must use their wits and a unique Focus ability to solve intricate puzzles while navigating through disturbing, maze-like environments filled with psychological horror elements.</p>
+                    <p>Sweet Spot is a first-person puzzle-horror game where you play as a hotel concierge trapped in a looping hallway by an eldritch horror. Manage your Madness Meter—Sane, The Sweet Spot, and Mad. While in The Sweet Spot, use your Focus ability to reveal hidden items, solve puzzles, and find the missing elevator pieces to escape.</p>
 
                     <h3>Key Features</h3>
                     <ul>
-                        <li><strong>Focus Ability System:</strong> Unique mechanic allowing players to reveal hidden clues and environmental hints</li>
+                        <li><strong>Focus Ability:</strong> Unique mechanic allowing players to reveal hidden clues and environmental hints</li>
                         <li><strong>Atmospheric Horror:</strong> Psychological tension built through environmental storytelling and sound design</li>
-                        <li><strong>Complex Puzzle Design:</strong> Multi-layered puzzles requiring observation, logic, and timing</li>
-                        <li><strong>Dynamic Maze Generation:</strong> Procedurally influenced level layouts that keep players disoriented</li>
-                        <li><strong>Immersive Audio:</strong> 3D spatial audio system that enhances horror atmosphere</li>
+                        <li><strong>Madness Meter:</strong> Sane (neutral), Sweet Spot (activates Focus to reveal hidden items), Mad (vignette and chromatic aberration); Madness increases in rooms and decreases in hallways</li>
                     </ul>
 
                     <h3>Technical Highlights</h3>
                     <ul>
-                        <li>Implemented custom Focus ability system using Unreal's Blueprint and C++ integration</li>
-                        <li>Developed sophisticated lighting system for dramatic atmospheric effects</li>
-                        <li>Created modular puzzle framework allowing for easy level design iteration</li>
-                        <li>Built custom shader materials for horror-themed visual effects</li>
-                        <li>Optimized rendering pipeline for complex indoor environments</li>
-                    </ul>
-
-                    <h3>Gameplay Mechanics</h3>
-                    <ul>
-                        <li><strong>Focus Mode:</strong> Players can enter a heightened state revealing interactive objects and hidden pathways</li>
-                        <li><strong>Environmental Puzzles:</strong> Solutions require manipulating lighting, moving objects, and discovering hidden switches</li>
-                        <li><strong>Tension Management:</strong> Carefully paced horror elements that build suspense without relying on jump scares</li>
-                        <li><strong>Progressive Discovery:</strong> Story unfolds through environmental clues and puzzle solutions</li>
+                        <li>Tentacle and eye entities that fade when looked at while in Focus mode</li>
+                        <li>Smooth camera with adjustable FOV, vignette, and chromatic aberration effects</li>
+                        <li>Objects that fade in and out of reality based on the player’s Madness</li>
                     </ul>
 
                     <h3>My Role</h3>
-                    <p>As the primary developer, I handled:</p>
+                    <h4>As a programmer, I handled:</h4>
                     <ul>
-                        <li>Core gameplay programming and Focus ability implementation</li>
-                        <li>Puzzle system architecture and individual puzzle mechanics</li>
-                        <li>Lighting and atmosphere programming for horror elements</li>
-                        <li>Performance optimization for complex 3D environments</li>
-                        <li>Integration of audio systems and environmental storytelling</li>
+                        <li>Focus ability implementation</li>
+                        <li>UI popups for item pickups and environmental feedback</li>
+                        <li>Camera effects (shake, FOV, post-processing) to enhance player interaction and immersion</li>
+                        <li>Tentacle and eye entities that react to Focus</li>
+                        <li>Teleporting doors used for puzzles and maze navigation</li>
                     </ul>
                 </div>
             </div>
@@ -350,22 +336,19 @@
                         I'm always interested in new opportunities and exciting projects.
                         Whether you have a question or just want to say hi, I'll try my best to get back to you!
                     </p>
+                    <!-- email -->
                     <div class="contact-details">
-                        <div class="contact-item">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <span>chunhaneul06@gmail.com</span>
-                        </div>
+                        <h4>Find me online</h4>
+                        <!-- github -->
                         <div class="contact-item">
                             <a href="https://github.com/PG27Haneul" class="social-link" target="_blank" rel="noopener noreferrer">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                 </svg>
+                                <span>github.com/PG27Haneul</span>
                             </a>
-                            <span>github.com/PG27Haneul</span>
                         </div>
+                        <!-- linkedin -->
                         <div class="contact-item">
                             <a href="https://www.linkedin.com/in/haneul-chun-095751373/" class="social-link" target="_blank" rel="noopener noreferrer">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -373,12 +356,16 @@
                                     <rect x="2" y="9" width="4" height="12"></rect>
                                     <circle cx="4" cy="4" r="2"></circle>
                                 </svg>
+                                <span>linkedin.com/in/haneul-chun-095751373/</span>
                             </a>
-                            <span>linkedin.com/in/haneul-chun-095751373/</span>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <h3>Send me a message</h3>
+                    </div>
+
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
