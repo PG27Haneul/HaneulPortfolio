@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroTitle) {
         const originalText = heroTitle.textContent;
         // Uncomment the line below to enable typing effect
-        // typeWriter(heroTitle, originalText, 150);
+        //typeWriter(heroTitle, originalText, 150);
     }
 });
 
